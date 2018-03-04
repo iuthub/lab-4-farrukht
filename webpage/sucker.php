@@ -7,6 +7,10 @@
 
 
 	<body>
+		<?php  
+		if(isset($_REQUEST["name"])&&isset($_REQUEST["section"])&&isset($_REQUEST["Creditnumber"])&&isset($_REQUEST["CreditCard"])&&($_REQUEST["name"]!="")&&($_REQUEST["Creditnumber"]!=""))
+		{
+		?>
 		<h1>Thanks, sucker!</h1>
 		<?php
 			 $name= $_REQUEST["name"];
@@ -43,6 +47,15 @@
 		<pre><?= $line?></pre>
 		<?php
 	}
+}
+else
+{
+	?>
+	<h1>Sorry!</h1>
+	<p>You didn't fill out the form completly!<a href="buyagrade.html">TRY AGAIN?</a></p>
+	<?php
+	
+}
 	?>
 	</body>
 </html>  
